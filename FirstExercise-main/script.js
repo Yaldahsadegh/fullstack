@@ -1,3 +1,3 @@
-document.getElementById("actionButton").addEventListener("click", function() {
-    alert("Button clicked!");
+document.getElementById("actionButton").addEventListener("click", function () {
+  alert("Button clicked!");
 });
