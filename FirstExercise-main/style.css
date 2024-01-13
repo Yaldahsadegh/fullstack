@@ -15,7 +15,7 @@ body {
   visibility: visible;
 }
 .topnav {
-  background-color: hsla(18, 57%, 50%, 0.74);
+  background-color: hsla(308, 70%, 74%, 0.74);
   overflow: hidden;
 }
 .topnav a {
@@ -28,5 +28,14 @@ body {
 }
 .topnav a:hover {
   background-color: #ddd;
-  color: rgb(92, 20, 20);
+  color: rgb(67, 130, 188);
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #d4f9ff;
+  color: black;
+  text-align: center;
 }
