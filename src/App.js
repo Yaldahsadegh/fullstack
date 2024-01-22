@@ -1,6 +1,10 @@
-function Square({ value }) {
+import { useState } from "react";
+
+function Square() {
+  const [value, setValue] = useState(null);
+
   function handleClick() {
-    console.log("clicked!");
+    setValue("X");
   }
 
   return (
@@ -10,26 +14,24 @@ function Square({ value }) {
   );
 }
 
-//making the function accessible outside the file
-
-export default function board() {
+export default function Board() {
   return (
     <>
       <div className="board-row">
-        <Square value="1" />
-        <Square value="2" />
-        <Square value="3" />
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <Square value="4" />
-        <Square value="5" />
-        <Square value="6" />
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <Square value="7" />
-        <Square value="8" />
-        <Square value="9" />
+        <Square />
+        <Square />
+        <Square />
       </div>
     </>
   );
-} //buttons have been created with use of div to make them not to be in one single line and get our square shape
+}
