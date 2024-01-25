@@ -11,9 +11,9 @@ function Square({ value, onSquareClick }) {
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   // defining the handleClick function inside the Board component to update the squares array
-  function handleClick() {
+  function handleClick(i) {
     const nextSquares = squares.slice();
-    nextSquares[0] = "X";
+    nextSquares[i] = "X";
     setSquares(nextSquares);
   }
   return (
