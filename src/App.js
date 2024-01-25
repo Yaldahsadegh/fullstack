@@ -9,18 +9,24 @@ function Square({ value, onSquareClick }) {
 }
 
 export default function Board() {
+  const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
   // defining the handleClick function inside the Board component to update the squares array.Adding argument i to the handleClick function that takes the index of the square to update
   function handleClick(i) {
     const nextSquares = squares.slice();
     nextSquares[i] = "X";
+    if (xIsNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
   //() => handleClick(0) is an arrow function,
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
